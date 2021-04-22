@@ -18,3 +18,7 @@ It has been modified to better suit [SkullFace](https://www.twitch.tv/skullhasfa
 
 ### Update
 Update using the `./deploy.sh`.  This will make sure you have everything
+
+### Restart Script
+Remember, you will need to restart the chat script every time you update it. 
+Clients may need to reconnect too.
