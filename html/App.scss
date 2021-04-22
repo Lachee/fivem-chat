@@ -58,8 +58,8 @@ em {
     
     -webkit-animation-duration: 2s;
 
-    border: 3px solid rgba(0, 0, 0, 0.158);
-    border-radius: 3px 0;
+    //border: 3px solid rgba(0, 0, 0, 0.158);
+    border-radius: 3px;
 
     background: black;
     background-image:       linear-gradient(45deg, $checker-primary 25%, $checker-secondary 25%), linear-gradient(-45deg, $checker-primary 25%, $checker-secondary 25%), linear-gradient(45deg, $checker-secondary 75%, $checker-primary 75%), linear-gradient(-45deg, $checker-secondary 75%, $checker-primary 75%);
