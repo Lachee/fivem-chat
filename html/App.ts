@@ -160,7 +160,7 @@ export default Vue.extend({
 
     modePrefix(): string {
       if (this.modes.length === 2) {
-        return `➤`;
+        return ``;
       }
 
       return this.modes[this.modeIdxGet].displayName;
@@ -427,8 +427,8 @@ export default Vue.extend({
       const style = getComputedStyle(input);
       const paddingRemove = parseFloat(style.paddingBottom) + parseFloat(style.paddingTop);
 
-      input.style.height = "5px";
-      input.style.height = `${input.scrollHeight - paddingRemove}px`;
+      // input.style.height = "5px";
+      // input.style.height = `${input.scrollHeight - paddingRemove}px`;
     },
     send() {
       if (this.message !== "") {

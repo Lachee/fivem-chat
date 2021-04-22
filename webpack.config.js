@@ -31,15 +31,19 @@ module.exports = {
                 ]
             },
             {         
-                test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
                 use: [ { loader: 'file-loader', options: { name: 'fonts/[name].[ext]' } } ]
+            },            
+            {
+                test: /\.(jpe?g|png|svg)(\?[a-z0-9=&.]+)?$/,
+                use: 'base64-inline-loader?limit=1000&name=[name].[ext]'
             }
         ]
     },
     plugins: [
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
-            inlineSource: '.(js|css)$',
+            inlineSource: '.(js)$',
             template: './html/index.html',
             filename: 'ui.html'
         }),
@@ -48,7 +52,6 @@ module.exports = {
             filename: 'index.css',
             chunkFilename: 'index.[name].css',
         }),
-        //new CopyPlugin([ { from: 'html/index.css', to: 'index.css' } ]),
     ],
     resolve: {
         extensions: [ '.ts', '.js' ]

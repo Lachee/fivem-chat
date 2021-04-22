@@ -1,0 +1,11 @@
+$prefix-width: 30px !default;
+.prefix {
+    width: $prefix-width;
+    &.any {
+        background-image: url('./icons/outline_mode_comment_black_24dp.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: $input-height - 20px;
+        filter: contrast(0) brightness(2);
+    }
+}
