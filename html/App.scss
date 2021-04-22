@@ -3,7 +3,7 @@
 $font-size: 11pt;
 $tint-primary: rgba(213, 5, 183, 0.4);
 $tint-secondary: rgba(83, 0, 177, 0.6);
-$checker-primary: #808080;
+$checker-primary: #80808023;
 $checker-secondary: transparent;
 $checker-size: 25px;
 $input-height: 35px;
@@ -45,6 +45,8 @@ em {
     height: $window-height;
     background: $window-background;
     max-width: 1000px;
+
+    overflow: hidden;
 }
 
 .chat-window {
@@ -55,6 +57,9 @@ em {
     right: 0;
     
     -webkit-animation-duration: 2s;
+
+    border: 3px solid rgba(0, 0, 0, 0.158);
+    border-radius: 3px 0;
 
     background: black;
     background-image:       linear-gradient(45deg, $checker-primary 25%, $checker-secondary 25%), linear-gradient(-45deg, $checker-primary 25%, $checker-secondary 25%), linear-gradient(45deg, $checker-secondary 75%, $checker-primary 75%), linear-gradient(-45deg, $checker-secondary 75%, $checker-primary 75%);
