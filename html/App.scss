@@ -8,6 +8,11 @@ $checker-secondary: transparent;
 $checker-size: 25px;
 $input-height: 35px;
 
+$window-top: 1.5%;
+$window-left: 0.8%;
+$window-width: 38%;
+$window-height: 22%;
+$window-background: none;
 
 /* todo: more game colors */
 
@@ -34,11 +39,11 @@ em {
 
 .chat-box {
     position: absolute;
-    top: 1.5%;
-    left: 0.8%;
-    width: 38%;
-    height: 22%;
-    background: black;
+    top: $window-top;
+    left: $window-left;
+    width: $window-width;
+    height: $window-height;
+    background: $window-background;
     max-width: 1000px;
 }
 
