@@ -1,12 +1,18 @@
 @import "./vendor/animate.3.5.2.min.css", "./vendor/flexboxgrid.6.3.1.min.css", "./vendor/latofonts.css";
 
 $font-size: 11pt;
-$tint-primary: rgba(213, 5, 183, 0.4);
-$tint-secondary: rgba(83, 0, 177, 0.6);
-$checker-primary: #80808023;
+
+$chat-alpha: 0.25;
+$chat-checker-alpha: 0.05;
+
+$tint-primary: rgba(213, 5, 183, $chat-alpha);
+$tint-secondary: rgba(83, 0, 177, $chat-alpha);
+$checker-primary: rgba(128, 128, 128, $chat-checker-alpha);
+$input-background: #3c0b6591;
 $checker-secondary: transparent;
 $checker-size: 25px;
 $input-height: 35px;
+
 
 $window-top: 1.5%;
 $window-left: 0.8%;
@@ -46,7 +52,6 @@ em {
     background: $window-background;
     max-width: 1000px;
 
-    overflow: hidden;
 }
 
 .chat-window {
@@ -61,7 +66,6 @@ em {
     //border: 3px solid rgba(0, 0, 0, 0.158);
     border-radius: 3px;
 
-    background: black;
     background-image:       linear-gradient(45deg, $checker-primary 25%, $checker-secondary 25%), linear-gradient(-45deg, $checker-primary 25%, $checker-secondary 25%), linear-gradient(45deg, $checker-secondary 75%, $checker-primary 75%), linear-gradient(-45deg, $checker-secondary 75%, $checker-primary 75%);
     background-size:        $checker-size $checker-size;
     background-position:    0 0, 0 ($checker-size / 2), ($checker-size / 2) ($checker-size / -2), ($checker-size / -2) 0px;
@@ -112,11 +116,14 @@ em {
         align-items: stretch;
         width: 100%;
         height: 100%;
-        background-color: rgba(44, 62, 80, 1);
+        background-color: $input-background;
 
         textarea {
             width: 100%;
-            height: 100%;
+            padding: 8px;
+            background: #0000005e;
+            border: none;
+            color: white;
         }
         
         textarea:focus, &:focus {
@@ -130,21 +137,6 @@ em {
     margin-left: 0.05vw;
     font-size: 1.65vh;
 }
-
-.prefix {
-    font-size: 1.8vh;
-    /*position: absolute;
-  top: 0%;*/
-    height: 100%;
-    vertical-align: middle;
-    line-height: calc(1vh + 1vh + 1.85vh);
-    padding-left: 0.5vh;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: inline-block;
-}
-
-
 
 .msg {
     margin-bottom: 0.28%;
@@ -163,7 +155,7 @@ em {
     font-size: 1.65vh;
     box-sizing: border-box;
     color: white;
-    background-color: rgba(44, 62, 80, 1);
+    background-color: $input-background;
     width: 100%;
 }
 

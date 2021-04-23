@@ -3,10 +3,10 @@ import CONFIG from './config';
 import Vue from 'vue';
 
 import './App.scss';
+
 import Suggestions from './Suggestions.vue';
 import MessageV from './Message.vue';
 import { Suggestion } from './Suggestions';
-
 
 export interface Message {
   args: string[];
@@ -160,7 +160,7 @@ export default Vue.extend({
 
     modePrefix(): string {
       if (this.modes.length === 2) {
-        return ``;
+        return ` `;
       }
 
       return this.modes[this.modeIdxGet].displayName;

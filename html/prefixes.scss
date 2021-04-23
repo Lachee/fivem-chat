@@ -1,5 +1,14 @@
 $prefix-width: 30px !default;
 .prefix {
+    font-size: 1.8vh;
+    height: 100%;
+    vertical-align: middle;
+    line-height: calc(1vh + 1vh + 1.85vh);
+    padding-left: 0.5vh;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    
     width: $prefix-width;
     &.any {
         background-image: url('./icons/outline_mode_comment_black_24dp.png');
