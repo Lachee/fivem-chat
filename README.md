@@ -2,13 +2,6 @@
 This repository is a modified version of the default [FiveM](https://github.com/citizenfx/cfx-server-data) chat. 
 It has been modified to better suit [SkullFace](https://www.twitch.tv/skullhasface)'s RP server.
 
-## Requirements
-
-- FiveM (obviously)
-- Git 
-- Some form of bash (cause the scripts are bash scripts)
-- NPM (node package manager. run `npm --version` to verify)
-
 # Installation
 ## Requirements
 - FiveM
