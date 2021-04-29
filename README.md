@@ -9,12 +9,21 @@ It has been modified to better suit [SkullFace](https://www.twitch.tv/skullhasfa
 - Some form of bash (cause the scripts are bash scripts)
 - NPM (node package manager. run `npm --version` to verify)
 
-## Installation
-1. cd to your `[gameplay]` folder in your server data
-2. remove the existing `chat` folder
-3. `git clone https://github.com/Lachee/fivem-chat.git chat`
-4. `cd chat`
-5. `./deploy.sh` ( obviously run this in your Bash for Windows. All my scripts use this )
+# Installation
+## Requirements
+- FiveM
+- ESX
+
+## Via Git ( recommended )
+From your resouces directory for the ESX server:
+```
+git clone https://github.com/Lachee/fivem-chat.git "[lachee]/lachee-chat"
+```
+
+Then in you server cfg:
+- `ensure lachee-chat`
+
+**Dont forget to remove the previous `[gameplay]/chat` script**
 
 ### Update
 Update using the `./deploy.sh`.  This will make sure you have everything
